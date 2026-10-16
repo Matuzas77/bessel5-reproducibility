@@ -200,5 +200,13 @@
     "notebook_code_cells": 7,
     "notebook_error_outputs": [],
     "notebook_sha256": "fa4089cb25684f6f7077b7943dabd387cfbade46308e81ff42f7df74991a3381"
+  },
+  "presentation_followup": {
+    "checked_at_utc": "2026-10-16T16:50:00.862193+00:00",
+    "change": "Colab Markdown requires dollar math delimiters; switched presentation delimiters and reran the notebook in a clean kernel. All seven code cells are byte-identical to the reviewed version.",
+    "code_parity_passed": true,
+    "fresh_execution_passed": true,
+    "notebook_sha256": "1d8ea9081608b0aaefe0d2b50fa7f04ff3d9786965baa33d92de2cb5ebbc78c2",
+    "disclosure": "All the work was done by AI."
   }
 }

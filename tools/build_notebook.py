@@ -173,6 +173,10 @@ References: [paper and source v4](https://doi.org/10.5281/zenodo.22793737),
 [mpmath integration documentation](https://mpmath.org/doc/current/calculus/integration.html).
 """)])
     for index, cell in enumerate(cells):
+        if cell.cell_type == "markdown":
+            # Colab's Markdown parser requires dollar delimiters for math.
+            cell.source = (cell.source.replace(r"\(", "$" ).replace(r"\)", "$")
+                           .replace(r"\[", "$$").replace(r"\]", "$$"))
         cell.id = hashlib.sha256(f"{index}:{cell.source}".encode()).hexdigest()[:16]
     nb = nbf.v4.new_notebook(cells=cells, metadata={
         "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
