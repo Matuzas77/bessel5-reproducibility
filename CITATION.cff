@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "Please cite the underlying paper. Also record the Git tag/commit and run.json for a reproduced computation."
 type: software
-title: "Bessel 5 reproducibility release: published v4 certificates and exact reconstructions"
-version: 1.0.0
+title: "Bessel 5 reproducibility: direct quadrature notebook and published v4 witnesses"
+version: 1.1.0
 date-released: 2026-10-16
 authors:
   - family-names: Matuzas
@@ -11,7 +11,7 @@ authors:
 repository-code: https://github.com/Matuzas77/bessel5-reproducibility
 url: https://github.com/Matuzas77/bessel5-reproducibility
 license: CC-BY-4.0
-abstract: "All the work was done by AI. Jonas Matuzas is responsible for the claims. This release replays the published numerical certificates and exact modular witnesses; the Bessel equalities remain conjectural."
+abstract: "All the work was done by AI. Jonas Matuzas is responsible for the claims. This release adds a self-contained browser notebook with independent direct Bessel and eta-Mellin quadrature, and preserves replay of the published numerical certificates and exact witnesses. Numerical agreement is not a proof; the Bessel equalities remain conjectural."
 keywords:
   - Bessel moments
   - modular forms

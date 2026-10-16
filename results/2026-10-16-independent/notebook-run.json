@@ -1,0 +1,346 @@
+{
+  "started_utc": "2026-10-16T16:45:05.824665+00:00",
+  "finished_utc": "2026-10-16T16:45:24.869109+00:00",
+  "python": "3.12.12 (main, Oct  9 2025, 11:07:00) [Clang 17.0.0 (clang-1700.4.4.1)]",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "mpmath": "1.3.0",
+  "runs": [
+    {
+      "dps": 40,
+      "bessel": {
+        "value": "135.268302580868837594226279646192207420305889359",
+        "requested_dps": 40,
+        "working_dps": 60,
+        "variant": "primary",
+        "backend": "mpmath 1.3.0",
+        "method": "Direct K0 evaluation and tanh-sinh quadrature",
+        "integral": "integral_0^infinity K0(t)^5 dt (no factor t)",
+        "low_integral": "135.266390586978628039207813329609489895907941663",
+        "high_integral": "0.00191199389020955501846631658271752439794769669262",
+        "low_settings": {
+          "substitution": "t = exp(-x)",
+          "x_partitions": [
+            "0.0",
+            "1.0",
+            "4.0",
+            "10.0",
+            "25.0",
+            "60.0",
+            "172.693881974553426301349359101327315570082611647"
+          ],
+          "small_t_cutoff": "1.0e-75",
+          "omitted_lower_tail_bound_formula": "exp(5/4-X)*((X+1)^5+5*(X+1)^4+20*(X+1)^3+60*(X+1)^2+120*(X+1)+120)"
+        },
+        "upper_t_cutoff": "23.9468849671380751137871111287173877590514554817",
+        "upper_segments": [
+          {
+            "interval": [
+              "1.0",
+              "2.0"
+            ],
+            "working_dps": 58
+          },
+          {
+            "interval": [
+              "2.0",
+              "5.0"
+            ],
+            "working_dps": 56
+          },
+          {
+            "interval": [
+              "5.0",
+              "10.0"
+            ],
+            "working_dps": 50
+          },
+          {
+            "interval": [
+              "10.0",
+              "15.0"
+            ],
+            "working_dps": 39
+          },
+          {
+            "interval": [
+              "15.0",
+              "20.0"
+            ],
+            "working_dps": 28
+          },
+          {
+            "interval": [
+              "20.0",
+              "23.9468849671380751137871111287173877590514554817"
+            ],
+            "working_dps": 25
+          }
+        ],
+        "omitted_lower_tail_bound_estimate": "5.68068247675213601574900197240137877448251392994e-64",
+        "omitted_upper_tail_bound_estimate": "2.20397730549984830390119863507151789863730427806e-56",
+        "omitted_tail_upper_bound_estimate": "2.20397736230667307142255879256153762265109202289e-56",
+        "upper_tail_bound_formula": "(pi/(2*T))^(5/2)*exp(-5*T)/5",
+        "quadrature_error_heuristic": "2.67873697280821657929850234211880000429936434143e-65",
+        "error_status": "Analytic tail inequalities evaluated in floating point; quadrature and roundoff are not rigorously enclosed. Check convergence across precision and substitutions.",
+        "elapsed_seconds": 4.257374,
+        "ai_disclosure": "All the work was done by AI."
+      },
+      "modular": {
+        "real": "1.291976871889574966527300485843216091404",
+        "imag": "-0.1744414763789383543347225274297312549237",
+        "rhs": "135.2683025808688375942262796461922074203",
+        "settings": {
+          "dps": 40,
+          "working_dps": 60,
+          "variant": "primary",
+          "quadrature": "mpmath tanh-sinh",
+          "variable": "y; full positive real axis",
+          "partition": [
+            "0.0",
+            "0.0166666666666666667",
+            "0.0333333333333333333",
+            "0.1",
+            "0.166666666666666667",
+            "0.5",
+            "1.0",
+            "3.0",
+            "+inf"
+          ],
+          "eta_method": "S transformation and fresh Euler pentagonal sum",
+          "eta_terms_each_side": 7,
+          "eta_product_truncation_bound": "1.8054799e-251",
+          "tails": "No explicit tail cutoff; mpmath handles infinite endpoints numerically.",
+          "integrand_evaluations": 2912,
+          "mpmath_version": "1.3.0",
+          "rigorous_enclosure": false,
+          "source": "Mathematical eta-quotient definition in upstream/main.tex only",
+          "embedding_check": {
+            "passed": true,
+            "method": "Fresh formal integer Euler products through q^7",
+            "coefficients": {
+              "1": {
+                "real": "1.0",
+                "imag": "0.0"
+              },
+              "3": {
+                "real": "2.2360679774997897",
+                "imag": "-2.0"
+              },
+              "5": {
+                "real": "2.2360679774997897",
+                "imag": "4.47213595499957939"
+              },
+              "7": {
+                "real": "0.0",
+                "imag": "-8.0"
+              }
+            },
+            "absolute_errors": {
+              "1": "0.0",
+              "3": "0.0",
+              "5": "3.1115076e-61",
+              "7": "0.0"
+            }
+          }
+        },
+        "seconds": 0.66974,
+        "disclosure": "All the work was done by AI."
+      }
+    },
+    {
+      "dps": 60,
+      "bessel": {
+        "value": "135.26830258086883759422627964619220742030588935942352678469351371046",
+        "requested_dps": 60,
+        "working_dps": 80,
+        "variant": "alternate",
+        "backend": "mpmath 1.3.0",
+        "method": "Direct K0 evaluation and tanh-sinh quadrature",
+        "integral": "integral_0^infinity K0(t)^5 dt (no factor t)",
+        "low_integral": "135.26639058697862803920781332960948989590794166273090374979463800494",
+        "high_integral": "0.0019119938902095550184663165827175243979476966926230348988757055169579",
+        "low_settings": {
+          "substitution": "t = u^16",
+          "u_partitions": [
+            "0.0",
+            "0.25",
+            "0.5",
+            "0.75",
+            "1.0"
+          ],
+          "small_t_cutoff": "0",
+          "omitted_lower_tail_bound_formula": "0 (no explicit lower-end truncation; quadrature error remains numerical)"
+        },
+        "upper_t_cutoff": "35.459810432108303533877068402139208797056962924883103830913249674901",
+        "upper_segments": [
+          {
+            "interval": [
+              "1.0",
+              "1.5"
+            ],
+            "working_dps": 78
+          },
+          {
+            "interval": [
+              "1.5",
+              "3.0"
+            ],
+            "working_dps": 77
+          },
+          {
+            "interval": [
+              "3.0",
+              "7.0"
+            ],
+            "working_dps": 74
+          },
+          {
+            "interval": [
+              "7.0",
+              "12.0"
+            ],
+            "working_dps": 65
+          },
+          {
+            "interval": [
+              "12.0",
+              "18.0"
+            ],
+            "working_dps": 54
+          },
+          {
+            "interval": [
+              "18.0",
+              "26.0"
+            ],
+            "working_dps": 41
+          },
+          {
+            "interval": [
+              "26.0",
+              "35.459810432108303533877068402139208797056962924883103830913249674901"
+            ],
+            "working_dps": 25
+          }
+        ],
+        "omitted_lower_tail_bound_estimate": "0.0",
+        "omitted_upper_tail_bound_estimate": "8.2601638928952702977842025847967018686169663124784297290671025343214e-82",
+        "omitted_tail_upper_bound_estimate": "8.2601638928952702977842025847967018686169663124784297290671025343214e-82",
+        "upper_tail_bound_formula": "(pi/(2*T))^(5/2)*exp(-5*T)/5",
+        "quadrature_error_heuristic": "3.498467265101566597502992436066372162053702461221517991215991874749e-84",
+        "error_status": "Analytic tail inequalities evaluated in floating point; quadrature and roundoff are not rigorously enclosed. Check convergence across precision and substitutions.",
+        "elapsed_seconds": 12.481123,
+        "ai_disclosure": "All the work was done by AI."
+      },
+      "modular": {
+        "real": "1.29197687188957496652730048584321609140445653787241510901889",
+        "imag": "-0.17444147637893835433472252742973125492367888876936754558164",
+        "rhs": "135.268302580868837594226279646192207420305889359423526784694",
+        "settings": {
+          "dps": 60,
+          "working_dps": 80,
+          "variant": "shifted",
+          "quadrature": "mpmath tanh-sinh",
+          "variable": "u=log(y); y in [exp(-12),exp(8)]",
+          "partition": [
+            "-12.0",
+            "-6.0",
+            "-4.0",
+            "-3.0",
+            "-2.0",
+            "-1.0",
+            "0.0",
+            "1.0",
+            "3.0",
+            "8.0"
+          ],
+          "eta_method": "S transformation and fresh Euler pentagonal sum",
+          "eta_terms_each_side": 7,
+          "eta_product_truncation_bound": "1.8054799e-251",
+          "tails": "Numerical tails omitted outside [exp(-12),exp(8)]; eta asymptotic decay is far below requested precision, but no interval bound is claimed.",
+          "integrand_evaluations": 5861,
+          "mpmath_version": "1.3.0",
+          "rigorous_enclosure": false,
+          "source": "Mathematical eta-quotient definition in upstream/main.tex only",
+          "embedding_check": {
+            "passed": true,
+            "method": "Fresh formal integer Euler products through q^7",
+            "coefficients": {
+              "1": {
+                "real": "1.0",
+                "imag": "0.0"
+              },
+              "3": {
+                "real": "2.2360679774997897",
+                "imag": "-2.0"
+              },
+              "5": {
+                "real": "2.2360679774997897",
+                "imag": "4.47213595499957939"
+              },
+              "7": {
+                "real": "-8.43375835458441858e-81",
+                "imag": "-8.0"
+              }
+            },
+            "absolute_errors": {
+              "1": "0.0",
+              "3": "0.0",
+              "5": "8.4337584e-81",
+              "7": "8.4337584e-81"
+            }
+          }
+        },
+        "seconds": 1.625672,
+        "disclosure": "All the work was done by AI."
+      }
+    }
+  ],
+  "assessment": {
+    "passed": true,
+    "comparisons": [
+      {
+        "dps": 40,
+        "relative_discrepancy": "4.35383522055e-41",
+        "threshold": "1.0e-30",
+        "passed": true
+      },
+      {
+        "dps": 60,
+        "relative_discrepancy": "3.5949999425e-60",
+        "threshold": "1.0e-50",
+        "passed": true,
+        "convergence": {
+          "previous_dps": 40,
+          "bessel_relative_change": "3.13101278432e-48",
+          "rhs_relative_change": "4.35383553365e-41",
+          "threshold": "1.0e-30",
+          "passed": true
+        }
+      }
+    ],
+    "negative_controls": {
+      "conjugate_complex_embedding": {
+        "value": "111.675737194513115718267",
+        "relative_discrepancy": "0.174413110361",
+        "rejected": true
+      },
+      "omit_mellin_4pi_squared": {
+        "value": "0.0867913746197794216298119",
+        "relative_discrepancy": "0.999358376109",
+        "rejected": true
+      },
+      "replace_L_squared_by_abs_L_squared": {
+        "value": "128.05743737029113998954",
+        "relative_discrepancy": "0.053307870898",
+        "rejected": true
+      }
+    },
+    "relative_1e_minus_12_perturbation_detected": true,
+    "rigorous_enclosure": false,
+    "interpretation": "Empirical numerical agreement; not a proof or human peer review.",
+    "disclosure": "All the work was done by AI."
+  },
+  "input_policy": "Definitions only; no upstream numerical data or saved answers read.",
+  "disclosure": "All the work was done by AI."
+}

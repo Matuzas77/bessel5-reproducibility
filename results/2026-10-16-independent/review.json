@@ -1,0 +1,204 @@
+{
+  "reviewed_at_utc": "2026-10-16T16:47:58.503650+00:00",
+  "disclosure": "All the work was done by AI.",
+  "scope": "Independent AI-assisted scientific and code review; no independent human peer review or proof-assistant formalization.",
+  "reviewed_files": {
+    "independent/bessel.py": "faec816b013270e99b127501751363614673565392a1e20cbf2b0db04d4f058a",
+    "independent/lvalue.py": "5c09ced9fbe2b315f5af5f79a6bf329c201121be41664b00858354bcc910b9ad",
+    "independent/compare.py": "226a43b03f650f0e4d200cd2660a3e1066b7f79cdee1f3972b8075b59320e658",
+    "tools/build_notebook.py": "684399877c46c1be99955f3734129bd37c805a3a189150b49fe7b57e276c3167",
+    "tools/check_notebook.py": "91636d9897e1803aa61f33099b8fb2a350445aabcf810dab0649bf3db71f4ca9",
+    "tools/run_independent.py": "ebf0b5f831bd2973eb0939d9023080509c16513c960f54f27d9f2c742801c00e",
+    "docs/INDEPENDENT_CHECK.md": "b777568c557137c7a8b8f7d217ecae2f6f6b23ab22d82f1380a04a936585bf03",
+    "README.md": "87cead502c8612aeaf58d2ea8cd7f8d41a6ffa09e8e871eb8f83b7fa4b07633c"
+  },
+  "scientific_review": {
+    "manuscript_normalization": "A0 = integral K0(t)^5 dt, with no t factor; L = 4*pi^2*integral y*f(i*y)dy. Square L before taking real and imaginary parts.",
+    "complex_embedding": "a3=sqrt(5)-2i, a5=sqrt(5)*(1+2i), a7=-8i; fresh formal Euler-product coefficients pass.",
+    "bessel_substitutions": "Both t=exp(-x) with weight exp(-x) and t=u^16 with weight 16*u^15 match the original dt measure; alternate integrand tends to zero at u=0.",
+    "lower_tail": "Confirmed K0(exp(-x)) <= exp(1/4)*(x+1) for x>=0 from convergent K0/I0 series and H_k<=k. Integrating its fifth power times exp(-x) yields exactly the implemented polynomial bound.",
+    "upper_tail": "Confirmed K0(t)<=sqrt(pi/(2*t))*exp(-t) from DLMF10.32.9 and cosh(u)>=1+u^2/2; integrating yields the implemented (pi/(2*T))^(5/2)*exp(-5*T)/5 bound.",
+    "eta_method": "S inversion with the positive real square root and Euler pentagonal product evaluation are correct. No archived numeric values, upstream routines or coefficient tables are imported.",
+    "mellin_method": "Direct y and transformed log(y) integrands and their Jacobians match. Low-y eta asymptotic comment pi/(30*y) is correct.",
+    "precision": "Bessel private context and locally rescaled upper segments use a plausible numerical absolute guard budget. Comparison parses decimal strings in a private max-requested+30-digit context, avoiding default precision truncation.",
+    "controls": "Conjugated embedding, omission of 4*pi^2 normalization, replacement of L^2 by abs(L)^2, and injected relative1e-12 perturbation test distinct failure modes.",
+    "blocking_findings": [],
+    "minor_note": "Resolved: compare.py now rejects non-increasing/duplicate precisions and requested precision below30."
+  },
+  "additional_executed_review_tests": {
+    "eta_literal_product_crosscheck": [
+      {
+        "x": "0.1",
+        "working_dps": 70,
+        "literal_euler_product_factors": 599,
+        "pentagonal_terms": 15,
+        "absolute_discrepancy": "2.4903117466773459011e-71",
+        "threshold": "1e-65",
+        "passed": true
+      },
+      {
+        "x": "0.2",
+        "working_dps": 70,
+        "literal_euler_product_factors": 599,
+        "pentagonal_terms": 15,
+        "absolute_discrepancy": "3.622271631530684947e-71",
+        "threshold": "1e-65",
+        "passed": true
+      },
+      {
+        "x": "1",
+        "working_dps": 70,
+        "literal_euler_product_factors": 599,
+        "pentagonal_terms": 15,
+        "absolute_discrepancy": "0.0",
+        "threshold": "1e-65",
+        "passed": true
+      },
+      {
+        "x": "2",
+        "working_dps": 70,
+        "literal_euler_product_factors": 599,
+        "pentagonal_terms": 15,
+        "absolute_discrepancy": "1.8111358157653424735e-71",
+        "threshold": "1e-65",
+        "passed": true
+      },
+      {
+        "x": "4",
+        "working_dps": 70,
+        "literal_euler_product_factors": 599,
+        "pentagonal_terms": 15,
+        "absolute_discrepancy": "4.5278395394133561838e-72",
+        "threshold": "1e-65",
+        "passed": true
+      }
+    ],
+    "fresh_embedding_check": {
+      "passed": true,
+      "method": "Fresh formal integer Euler products through q^7",
+      "coefficients": {
+        "1": {
+          "real": "1.0",
+          "imag": "0.0"
+        },
+        "3": {
+          "real": "2.2360679774997897",
+          "imag": "-2.0"
+        },
+        "5": {
+          "real": "2.2360679774997897",
+          "imag": "4.47213595499957939"
+        },
+        "7": {
+          "real": "0.0",
+          "imag": "-8.0"
+        }
+      },
+      "absolute_errors": {
+        "1": "0.0",
+        "3": "0.0",
+        "5": "0.0",
+        "7": "0.0"
+      }
+    }
+  },
+  "limits": [
+    "The crosschecks test numerical agreement and implementation conventions, not exact equality or proof of the Bessel conjecture.",
+    "Analytic truncation formulas are valid real-variable inequalities, but their floating evaluations and quadrature are not outward-rounded interval enclosures.",
+    "Both Bessel coordinate variants use mpmath tanh-sinh and special functions; method variation is not an independent numerical library.",
+    "Both sides use mpmath arithmetic but different mathematical inputs. The Bessel calculation does not receive the proposed right-hand side.",
+    "Full40/60/80 integral runs are performed and recorded by the implementation/root agents, not duplicated in this review."
+  ],
+  "primary_references": [
+    "https://dlmf.nist.gov/10.32.E9",
+    "https://dlmf.nist.gov/10.31.E2",
+    "https://dlmf.nist.gov/23.18.E5"
+  ],
+  "contacts": "No experts or other third parties contacted.",
+  "final_notebook_review": {
+    "blocking_findings": [],
+    "schema_and_embedded_source_parity": "PASS via tools/check_notebook.py; executed notebook embeds exactly the current3modules with SHA256 provenance.",
+    "input_independence": "Inspected every code cell. No archived numeric input, upstream routine import, saved result read or cross-side input is used. Saved notebook outputs are not read by calculation cells.",
+    "comparison_precision": "Final comparison guard validates increasing distinct precisions>=30; string parsing uses max precision+30digits.",
+    "controls": "Three phase/normalization negative controls and1e-12relative perturbation all present; assertions halt failure.",
+    "environment": "mpmath1.3.0wheel hash checked on installation; runtime metadata printed and saved. Fresh clean-kernel report supplied by root inspected; not rerun here.",
+    "numeric_claims": "README and method-note numerical discrepancy claims agree with actual standalone40/60/80report. Both numerical dependence and non-proof limits are explicit.",
+    "reassessed_saved_reports": {
+      "run.json": {
+        "requested_precisions": [
+          40,
+          60,
+          80
+        ],
+        "assessment_passed": true,
+        "matches_saved_assessment": true,
+        "comparisons": [
+          {
+            "dps": 40,
+            "relative_discrepancy": "4.35383522055e-41",
+            "threshold": "1.0e-30",
+            "passed": true
+          },
+          {
+            "dps": 60,
+            "relative_discrepancy": "3.5949999425e-60",
+            "threshold": "1.0e-50",
+            "passed": true,
+            "convergence": {
+              "previous_dps": 40,
+              "bessel_relative_change": "3.13101278432e-48",
+              "rhs_relative_change": "4.35383553365e-41",
+              "threshold": "1.0e-30",
+              "passed": true
+            }
+          },
+          {
+            "dps": 80,
+            "relative_discrepancy": "9.72546394758e-81",
+            "threshold": "1.0e-70",
+            "passed": true,
+            "convergence": {
+              "previous_dps": 60,
+              "bessel_relative_change": "8.22722130961e-69",
+              "rhs_relative_change": "3.59499995073e-60",
+              "threshold": "1.0e-50",
+              "passed": true
+            }
+          }
+        ]
+      },
+      "notebook-run.json": {
+        "requested_precisions": [
+          40,
+          60
+        ],
+        "assessment_passed": true,
+        "matches_saved_assessment": true,
+        "comparisons": [
+          {
+            "dps": 40,
+            "relative_discrepancy": "4.35383522055e-41",
+            "threshold": "1.0e-30",
+            "passed": true
+          },
+          {
+            "dps": 60,
+            "relative_discrepancy": "3.5949999425e-60",
+            "threshold": "1.0e-50",
+            "passed": true,
+            "convergence": {
+              "previous_dps": 40,
+              "bessel_relative_change": "3.13101278432e-48",
+              "rhs_relative_change": "4.35383553365e-41",
+              "threshold": "1.0e-30",
+              "passed": true
+            }
+          }
+        ]
+      }
+    },
+    "notebook_code_cells": 7,
+    "notebook_error_outputs": [],
+    "notebook_sha256": "fa4089cb25684f6f7077b7943dabd387cfbade46308e81ff42f7df74991a3381"
+  }
+}

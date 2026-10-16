@@ -8,9 +8,9 @@ import json
 from check_upstream import check
 
 ROOT = Path(__file__).resolve().parents[1]
-NAME = "bessel5-reproducibility-v1.0.0"
-TOP_FILES = ["README.md", "CITATION.cff", "LICENSE", "NOTICE.md", "requirements.lock", ".python-version", ".gitignore"]
-TREES = ["upstream", "tools", "docs", "provenance", ".github", "results/2026-10-16-macos-arm64"]
+NAME = "bessel5-reproducibility-v1.1.0"
+TOP_FILES = ["README.md", "CITATION.cff", "LICENSE", "NOTICE.md", "requirements.lock", "requirements-notebook.txt", ".python-version", ".gitignore"]
+TREES = ["upstream", "tools", "docs", "provenance", ".github", "independent", "notebooks", "results/2026-10-16-macos-arm64", "results/2026-10-16-independent"]
 
 
 def main():

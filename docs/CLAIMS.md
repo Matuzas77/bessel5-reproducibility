@@ -18,7 +18,9 @@ The code checks the finite computational pieces. Passing them is not independent
 
 The standard-library replay recomputes the source periods through hypergeometric series, recurrence relations and directed arithmetic, and computes the modular periods with separate decimal and binary implementations. It encloses rounding and truncation errors according to the supplied algorithms and analytic bounds. The odd Bessel row uses the inherited pairing and orientation inputs; it is not a completely separate direct quadrature measurement.
 
-The primary runner rebuilds exact modular and Manin-symbol data, not numerical Bessel quadrature. The recorded release therefore constitutes a fresh replay of the **supplied computational pipeline**, not a new independent derivation of all its analytic inputs.
+The primary runner rebuilds exact modular and Manin-symbol data, not numerical Bessel quadrature. Those original suites constitute a fresh replay of the **supplied computational pipeline**, not a new independent derivation of all its analytic inputs.
+
+Software v1.1.0 additionally provides a **separate direct quadrature notebook**. It evaluates K0(t)^5 directly and the eta-defined Mellin integral separately, with no saved results or upstream numerical routines as inputs. It changes precision, coordinates and partitions and rejects wrong phase/normalization controls. This new route supplies empirical convergence evidence, not a rigorous global error enclosure. Its two sides share mpmath, and its AI implementation/review is not independent human peer review. [Detailed methods](INDEPENDENT_CHECK.md).
 
 ## Remaining limits
 

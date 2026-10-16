@@ -1,4 +1,16 @@
-# Reproducibility packaging release v1.0.0
+# Direct-check notebook release v1.1.0
+
+Date: 16 October 2026. **All the work was done by AI.**
+
+- Adds direct numerical K0 quadrature, separate eta-Mellin quadrature, convergence checks and negative controls; no archived numerical answers are read.
+- Publishes a self-contained, executed notebook with an Open in Colab link; ordinary CPU execution, no Drive or credentials in code.
+- Records actual 40/60/80-digit runs and a clean-kernel notebook execution. The 80-digit cross-comparison passes the predeclared relative threshold 1e-70; empirical agreement does not prove the conjecture.
+- Adds clean-kernel notebook CI and source-parity validation. Keeps all 65 upstream files untouched and all original certificate/reconstruction suites.
+- No new scientific DOI, manuscript revision or external peer review is implied. The original v1.0.0 release remains available.
+
+See [methods, limitations and evidence](INDEPENDENT_CHECK.md).
+
+# Reproducibility packaging release v1.0.0 (historical)
 
 Date: 16 October 2026.
 

@@ -1,0 +1,4 @@
+# Authoring/execution tools; numerical inputs remain pinned in requirements.lock.
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.29.5
