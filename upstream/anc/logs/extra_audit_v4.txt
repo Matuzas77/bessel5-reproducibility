@@ -1,0 +1,1 @@
+PASS 16 higher-prime-power cyclotomic checks; 117 Delta=0 checks; gamma and spectral scalars

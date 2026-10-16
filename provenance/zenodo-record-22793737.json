@@ -1,0 +1,135 @@
+{
+  "created": "2026-09-16T10:54:10.312298+00:00",
+  "modified": "2026-10-06T10:26:16.858877+00:00",
+  "id": 22793737,
+  "conceptrecid": "22772618",
+  "doi": "10.5281/zenodo.22793737",
+  "conceptdoi": "10.5281/zenodo.22772618",
+  "doi_url": "https://doi.org/10.5281/zenodo.22793737",
+  "metadata": {
+    "title": "A quadratic critical-value conjecture for the fifth Bessel moment",
+    "doi": "10.5281/zenodo.22793737",
+    "publication_date": "2026-09-16",
+    "description": "<p>We conjecture a quadratic critical-value evaluation of &int;\u2080^&infin; K\u2080(t)\u2075 dt for a weight-three, level-60 newform. We prove that its twisted symmetric-square value at 2 equals &radic;15&pi;&sup2; times its Petersson norm, and give exact norm and coefficient-twist identities. These modular theorems identify the companion norm formula with Lim&ndash;Tu&ndash;Yu's conjecture; they do not prove the Bessel comparison. Chuang's period formulas relate the even and odd determinants. Directed intervals bound the individual-period discrepancy by 10\u207b&sup3;\u2075\u2078. Full proofs and reproducible certificates accompany the note.</p>\n<p>Generative-AI disclosure and author responsibility. The conjecture was obtained with OpenAI's ChatGPT-6-pro, which was also used for mathematical exploration, drafting, and development of the verification programs. The author is responsible for the final manuscript.</p>\n<p>2020 Mathematics Subject Classification: Primary 11F67; Secondary 33C10, 11F11.</p>\n<p>Files: the compiled PDF (4 pages) and the source archive containing main.tex together with the ancillary directory anc/ (full proofs of the norm, twist and twisted symmetric-square norm identities, exact modular certificates, Python interval-verification code, and SHA256SUMS for package integrity). Running python -B anc/verify.py regenerates the numerical enclosures and checks the modular proof witnesses using only Python's standard library; python -B verify_package.py checks the SHA-256 manifest and the stated equation status; the optional python -B anc/verify_primary.py (SymPy and mpmath) gives an independent exact reconstruction of the critical-norm coefficients and witnesses.</p>\n<p>Revision 3 (15 September 2026): Broadhurst's Paris lecture slides of 7 June 2017 are now cited directly, with page and section pointers and credit for the joint work with D. P. Roberts; the introduction distinguishes the specific M(0,5,0) candidate from the established Bessel&ndash;L-value programme; Section 3 clarifies the two parity conventions. All mathematical formulas, proof arguments, verifier programs and numerical output records from revision 2 are unchanged.</p>\n<p>Revision 4 (16 September 2026): Proposition 3.2 proves the purely modular twisted symmetric-square norm identity L(&chi;\u208b\u2084 Sym&sup2; f, 2) = &radic;15&pi;&sup2; \u27e8f,f\u27e9\u2086\u2080 (equation (3.5)), with the intermediate evaluation L(&chi;\u208b\u2084 Sym&sup2; f, 3) = &pi;\u2074 \u27e8f,f\u27e9\u2086\u2080/8; consequently the companion norm conjecture (3.3) and Lim&ndash;Tu&ndash;Yu's conjecture (3.4) are equivalent. The pure-moment conjecture (1.2) and the Bessel comparisons in (3.3)&ndash;(3.4) remain conjectural. The abstract and explanatory paragraphs are revised accordingly; the full analytic argument and rational witnesses are given in anc/proofs/critical_norm_bridge.md and anc/proofs/critical_norm_certificate.md; DLMF is added as reference [11]; the standard-library replay now runs ten jobs. All numerical output records from revision 3 are retained unchanged (discrepancy bounds 10\u207b&sup3;\u2075\u2078 for the pure moment and 10\u207b&sup3;\u2075&sup2; for each determinant).</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Matuzas, Jonas",
+        "affiliation": "Vilnius University",
+        "orcid": "0009-0008-0266-0498"
+      }
+    ],
+    "keywords": [
+      "Bessel moment",
+      "modular form",
+      "critical L-value",
+      "Petersson norm",
+      "interval arithmetic"
+    ],
+    "version": "v4 (revision 4, 16 September 2026)",
+    "language": "eng",
+    "resource_type": {
+      "title": "Preprint",
+      "type": "publication",
+      "subtype": "preprint"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 2,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "22772618"
+          }
+        }
+      ]
+    }
+  },
+  "title": "A quadratic critical-value conjecture for the fifth Bessel moment",
+  "links": {
+    "self": "https://zenodo.org/api/records/22793737",
+    "self_html": "https://zenodo.org/records/22793737",
+    "preview_html": "https://zenodo.org/records/22793737?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.22793737",
+    "self_doi": "https://doi.org/10.5281/zenodo.22793737",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.22793737",
+    "reserve_doi": "https://zenodo.org/api/records/22793737/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/22772618",
+    "parent_html": "https://zenodo.org/records/22772618",
+    "parent_doi": "https://doi.org/10.5281/zenodo.22772618",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.22772618",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:22793737/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:22793737/sequence/default",
+    "files": "https://zenodo.org/api/records/22793737/files",
+    "media_files": "https://zenodo.org/api/records/22793737/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:22793737:Bessel5_Quadratic_Conjecture_v4.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "latest": "https://zenodo.org/api/records/22793737/versions/latest",
+    "latest_html": "https://zenodo.org/records/22793737/latest",
+    "versions": "https://zenodo.org/api/records/22793737/versions",
+    "draft": "https://zenodo.org/api/records/22793737/draft",
+    "access_links": "https://zenodo.org/api/records/22793737/access/links",
+    "access_grants": "https://zenodo.org/api/records/22793737/access/grants",
+    "access_users": "https://zenodo.org/api/records/22793737/access/users",
+    "access_request": "https://zenodo.org/api/records/22793737/access/request",
+    "access": "https://zenodo.org/api/records/22793737/access",
+    "communities": "https://zenodo.org/api/records/22793737/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/22793737/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/22793737/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/22793737/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/22793737/quota-increase",
+    "requests": "https://zenodo.org/api/records/22793737/requests"
+  },
+  "updated": "2026-10-06T10:26:16.858877+00:00",
+  "recid": "22793737",
+  "revision": 5,
+  "files": [
+    {
+      "id": "f2b67a54-ad7e-46bc-89f3-2bd03ceb4f9a",
+      "key": "Bessel5_Quadratic_Conjecture_v4_Source.zip",
+      "size": 230793,
+      "checksum": "md5:e46d73538c822699c103609ac65ad9ca",
+      "links": {
+        "self": "https://zenodo.org/api/records/22793737/files/Bessel5_Quadratic_Conjecture_v4_Source.zip/content"
+      }
+    },
+    {
+      "id": "c0f8f823-33c4-47d1-b84f-9c1ea2ab42f2",
+      "key": "Bessel5_Quadratic_Conjecture_v4.pdf",
+      "size": 347274,
+      "checksum": "md5:c2d190f5ca8d7b547c98d4ff4555f156",
+      "links": {
+        "self": "https://zenodo.org/api/records/22793737/files/Bessel5_Quadratic_Conjecture_v4.pdf/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1882605"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 23,
+    "unique_downloads": 23,
+    "views": 128,
+    "unique_views": 88,
+    "version_downloads": 15,
+    "version_unique_downloads": 15,
+    "version_unique_views": 55,
+    "version_views": 78
+  },
+  "state": "done",
+  "submitted": true
+}

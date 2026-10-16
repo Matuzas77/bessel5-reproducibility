@@ -1,0 +1,5 @@
+PASS SHA-256 manifest: 64 files
+PASS 201 common class-number coefficients and six exact fields
+PASS stored extra audit: 16 cyclotomic sums, including 8 nonzero, and 117 boundary cases
+PASS article claim boundaries: equation (3.5) exact; Bessel equalities conjectural
+FINAL PASS. Stored checks do not formalize the analytic continuation proof.

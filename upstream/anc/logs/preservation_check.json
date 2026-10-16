@@ -1,0 +1,10 @@
+{
+  "eight_v3_records_byte_identical": true,
+  "eight_unchanged_numbered_equations": true,
+  "equation_3_5_promoted": true,
+  "PDF_pages": 4,
+  "PDF_sha256": "1d8c8ff9f3bb9c846e8c81610777587962b8c7dcad5b17915292f2537e7d85d2",
+  "ODT_pages_tested_renderer": 6,
+  "proof_formalized": false,
+  "Bessel_conjectures_proved": false
+}

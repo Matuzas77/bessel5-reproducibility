@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "carrier_bridge_through_q": 36,
+  "norm_and_numerical_form_identical": true,
+  "cyclic_polynomial": "U^4-2U^2+81",
+  "Hecke_eigenchecks": 144,
+  "orthogonal_Galois_eigenlines": 4,
+  "depleted_twist_Sturm_bound": 180,
+  "twist_factor_and_cross_conjugate_rewriting": "exact",
+  "Chuang_Betti_matrix": [
+    [
+      "1/4",
+      "0",
+      "-1/8"
+    ],
+    [
+      "0",
+      "1/10",
+      "0"
+    ],
+    [
+      "-1/8",
+      "0",
+      "3/40"
+    ]
+  ],
+  "dephased_H_inverse": [
+    [
+      "24",
+      "0",
+      "-40"
+    ],
+    [
+      "0",
+      "-10",
+      "0"
+    ],
+    [
+      "-40",
+      "0",
+      "80"
+    ]
+  ],
+  "cofactor_coefficient": "-75/4",
+  "determinant_relation": "D_even=pi^2*D_odd/(2sqrt15)",
+  "twisted_symmetric_square_value_evaluated": false,
+  "Bessel_equalities_proved": false
+}

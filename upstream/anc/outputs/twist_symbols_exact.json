@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "quotient_dimension": 48,
+  "manin_generators": 288,
+  "relations": 576,
+  "continued_fraction": "ceiling negative CF",
+  "witness_residual": {},
+  "uses_primary_matrices": false,
+  "Bessel_identity_proved": false
+}

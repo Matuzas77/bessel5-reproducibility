@@ -1,0 +1,37 @@
+RUN norm input/exact_hecke_definition.py
+PASS norm input/exact_hecke_definition.py
+RUN norm verify_fricke_eigenline.py
+PASS norm verify_fricke_eigenline.py
+RUN norm input/verify_fricke_exact.py
+PASS norm input/verify_fricke_exact.py
+RUN norm rankin_projection.py
+PASS norm rankin_projection.py
+RUN norm verify_norm_independent.py
+PASS norm verify_norm_independent.py
+RUN norm verify_phase_and_euler.py
+PASS norm verify_phase_and_euler.py
+RUN twist derive_symbols.py
+PASS twist derive_symbols.py
+RUN twist build_witness.py
+PASS twist build_witness.py
+RUN twist derive_projection.py
+PASS twist derive_projection.py
+RUN twist verify_symbols_independent.py
+PASS twist verify_symbols_independent.py
+RUN twist verify_modular_coeffs.py
+PASS twist verify_modular_coeffs.py
+RUN twist verify_coeffs_independent.py
+PASS twist verify_coeffs_independent.py
+RUN twist verify_period_algebra.py
+PASS twist verify_period_algebra.py
+RUN critical_norm proofs/verify_exact.py
+PASS critical_norm proofs/verify_exact.py
+RUN critical_norm proofs/verify_audit.py
+PASS critical_norm proofs/verify_audit.py
+norm rankin_projection.json PASS
+norm verify_norm_independent.json PASS
+twist results/independent_symbols.json pass
+EXACT RECORD MATCH: critical_norm_primary.json
+EXACT RECORD MATCH: critical_norm_audit.json
+FINAL PASS: 15 exact reconstruction jobs; no Bessel equality asserted. Analytic proofs are supplied separately.
+Elapsed seconds: 35.13

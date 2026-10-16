@@ -1,0 +1,32 @@
+TITLE
+A quadratic critical-value conjecture for the fifth Bessel moment
+
+AUTHOR
+Jonas Matuzas
+
+VERSION
+4 -- 16 September 2026
+
+ABSTRACT (LaTeX)
+We conjecture a quadratic critical-value evaluation of
+$\int_0^\infty K_0(t)^5\,\dd t$ for a weight-three, level-60 newform.
+We prove that its twisted symmetric-square value at $2$ equals
+$\sqrt{15}\pi^2$ times its Petersson norm, and give exact norm and
+coefficient-twist identities. These modular theorems identify the companion
+norm formula with Lim--Tu--Yu's conjecture; they do not prove the Bessel
+comparison. Chuang's period formulas relate the even and odd determinants.
+Directed intervals bound the individual-period discrepancy by $10^{-358}$.
+Full proofs and reproducible certificates accompany the note.
+
+COMMENTS
+4 pages. Complete ancillary proofs, exact modular certificates and directed-interval verification programs included. Version 4 proves the purely modular equation (3.5); the Bessel conjectures remain open.
+
+PRIMARY CATEGORY
+math.NT
+
+CROSS-LIST
+math.CA
+
+PUBLIC DEPOSIT
+https://zenodo.org/records/22773594
+This archive prepares a new version; it does not update that deposit.
