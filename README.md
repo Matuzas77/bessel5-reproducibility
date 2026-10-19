@@ -72,6 +72,7 @@ The **16 October 2026 local run passed all three suites** on macOS arm64 with CP
 
 - [Published v4 manuscript and source, Zenodo](https://doi.org/10.5281/zenodo.22793737)
 - [arXiv manuscript](https://arxiv.org/abs/2609.22318) — arXiv and Zenodo use different version numbering; this repository reproduces the specified Zenodo v4 archive.
+- [Bessel 5 paper page: abstract, reading guide and reproducibility resources](https://jonas-matuzas-research.bronzeharp16.chatgpt.site/papers/2026-a-quadratic-critical-value-conjecture-for-the-fifth-bessel-moment-414561930/)
 - [Author's research website](https://jonas-matuzas-research.bronzeharp16.chatgpt.site/)
 - [Bessel-moment topic guide](https://jonas-matuzas-research.bronzeharp16.chatgpt.site/research/bessel-moments/)
 - [ResearchGate paper](https://www.researchgate.net/publication/414561930)
